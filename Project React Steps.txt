@@ -1,0 +1,5 @@
+VS code
+oPEN Folder
+
+1. npx create-react-app . ....To create react app
+2. npm start ............ to start server

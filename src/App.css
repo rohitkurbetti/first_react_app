@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body{
+  color: #ffd6c7;
+  font-family: 'Baloo Da 2', cursive;
+  font-family: 'Gudea', sans-serif;
+  line-height: 1.4;
+  /*background-image: url('./images/image (2).jpg');*/
+  background-repeat: none;
+  background-size: cover;
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+header{
+  margin-bottom: 5px;
+}
+
+.container{
+  padding: 0 1rem;
+}
+
+.btn{
+  display: inline-block;
+  border: none;
+  background:#ab5746;
+  color:#fff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: #723e34;
+}
