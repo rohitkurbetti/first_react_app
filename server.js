@@ -1,5 +1,6 @@
 const express= require('express');
 const cors = require('cors');
+const path = require('path');
 
 const userRouter = require('./Backend/Routes/users');
 const excerciseRouter = require('./Backend/Routes/excercises');
@@ -11,7 +12,7 @@ const port = process.env.PORT || 3200;
 
 app.use(cors());
 app.use(express.json());
-
+app.use(express.static(path.join(__dirname,'public')));
 app.use('/users',userRouter);
 app.use('/excercises',excerciseRouter);
 

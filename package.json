@@ -25,12 +25,10 @@
         "router": "^1.3.5",
         "uuid": "^8.2.0"
     },
-
     "engines": {
         "node": "12.18.3",
-        "npm":"6.14.6"
+        "npm": "6.14.6"
     },
-
     "scripts": {
         "start": "concurrently \"react-scripts start\" \"node server.js\"",
         "build": "react-scripts build",
