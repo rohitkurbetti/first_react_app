@@ -24,6 +24,6 @@ connection.once('open', ()=>{
 	console.log('Mongodb db connection established succesfully');
 });
 
-app.listen(port,()=>{
+app.listen(process.env.PORT || 3200 ,()=>{
 	console.log(`Server running on port: ${port}`);
 });
