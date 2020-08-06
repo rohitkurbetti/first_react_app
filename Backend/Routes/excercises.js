@@ -4,7 +4,7 @@ const router = express.Router();
 let Excercise = require('../models/excercise.model');
 
 //get Excercise date
-router.get('/',(req,res)=>{
+router.get('/home',(req,res)=>{
     Excercise.find()
     .then(excercises => res.json(excercises))
     .catch(err => res.status(400).json({'Error:':err}));
