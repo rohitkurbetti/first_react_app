@@ -1,9 +1,0 @@
-heroku login
-
-git init
-git add .
-git commit =m "inital commit"
-heroku create  <copy the .git link>
-git remote add heroku <.git>
-git push heroku master
-heroku open

@@ -1,8 +1,8 @@
 const express= require('express');
 const cors = require('cors');
 
-const userRouter = require('./Backend/Routes/users');
-const excerciseRouter = require('./Backend/Routes/excercises');
+const userRouter = require('./Routes/users');
+const excerciseRouter = require('./Routes/excercises');
 
 require('dotenv').config();
 const mongoose = require('mongoose');
@@ -23,6 +23,6 @@ connection.once('open', ()=>{
 	console.log('Mongodb db connection established succesfully');
 });
 
-app.listen(process.env.PORT || 3200 ,()=>{
+app.listen(process.env.PORT || 3200,()=>{
 	console.log(`Server running on port: ${port}`);
 });

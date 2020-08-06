@@ -3,7 +3,7 @@ import Axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-const port = process.env.PORT || 3200;
+
 class CreateExcercises extends Component {
 
     constructor(props){
@@ -27,10 +27,10 @@ class CreateExcercises extends Component {
  
 
     componentDidMount(){
-        Axios.get('http://localhost:'+port+'/users')
+        Axios.get('http://localhost:3200/users')
         .then(response =>{
             if(response.data.length > 0){
-                console.log('GET : http://localhost:'+port+'/users');
+                console.log('GET : http://localhost:3200/users');
                 this.setState({
                     users: response.data.map(user => user.username),
                     username: response.data[0].username
@@ -79,9 +79,9 @@ class CreateExcercises extends Component {
 
         console.log(excercise);
 
-        Axios.post('http://localhost:'+port+'/excercises/add',excercise)
+        Axios.post('http://localhost:3200/excercises/add',excercise)
         .then(response => {
-            console.log('POST : http://localhost:'+port+'/excercises/add'+excercise);
+            console.log("POST : http://localhost:3200/excercises/add"+excercise);
             console.log(response.data) 
             console.log('Excercise Created')
         })
