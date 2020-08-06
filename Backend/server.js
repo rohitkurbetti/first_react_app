@@ -2,13 +2,13 @@ const express= require('express');
 const cors = require('cors');
 const path = require('path');
 
-const userRouter = require('./Backend/Routes/users');
-const excerciseRouter = require('./Backend/Routes/excercises');
+const userRouter = require('./Routes/users');
+const excerciseRouter = require('./Routes/excercises');
 
 require('dotenv').config();
 const mongoose = require('mongoose');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3200;
 
 app.use(cors());
 app.use(express.json());
