@@ -8,7 +8,7 @@ const excerciseRouter = require('./Backend/Routes/excercises');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const app = express();
-const port = process.env.PORT || 3200;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());

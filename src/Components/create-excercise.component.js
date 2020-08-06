@@ -27,10 +27,10 @@ class CreateExcercises extends Component {
  
 
     componentDidMount(){
-        Axios.get('http://localhost:3200/users')
+        Axios.get('http://localhost:3000/users')
         .then(response =>{
             if(response.data.length > 0){
-                console.log('GET : http://localhost:3200/users');
+                console.log('GET : http://localhost:3000/users');
                 this.setState({
                     users: response.data.map(user => user.username),
                     username: response.data[0].username
@@ -39,7 +39,7 @@ class CreateExcercises extends Component {
 
         })
         //to fetch data from db and print to console
-        //Axios.get('http://localhost:3200/excercises')
+        //Axios.get('http://localhost:3000/excercises')
         //.then(res=>console.log(res.data))
     }
 
@@ -79,9 +79,9 @@ class CreateExcercises extends Component {
 
         console.log(excercise);
 
-        Axios.post('http://localhost:3200/excercises/add',excercise)
+        Axios.post('http://localhost:3000/excercises/add',excercise)
         .then(response => {
-            console.log("POST : http://localhost:3200/excercises/add"+excercise);
+            console.log("POST : http://localhost:3000/excercises/add"+excercise);
             console.log(response.data) 
             console.log('Excercise Created')
         })
