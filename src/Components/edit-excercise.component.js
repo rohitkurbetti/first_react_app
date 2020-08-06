@@ -3,7 +3,7 @@ import Axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-const port = process.env.PORT || 3200;
+
 class EditExcercises extends Component {
 
     constructor(props){
@@ -28,7 +28,7 @@ class EditExcercises extends Component {
 
     componentDidMount(){
 
-        Axios.get('http://localhost:'+port+'/excercises/'+this.props.match.params.id)
+        Axios.get('http://localhost:3200/excercises/'+this.props.match.params.id)
         .then(response=>{
             console.log('GET : http://localhost:3200/excercises/'+this.props.match.params.id);
             this.setState({

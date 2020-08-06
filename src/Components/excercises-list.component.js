@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-const port = process.env.PORT||3200;
+
 
 const Excercise = props => (
     <tr>
@@ -29,12 +29,12 @@ class ExcerciseList extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:'+port+'/excercises')
+        axios.get('http://localhost:3200/excercises')
         .then(response => {
             this.setState({
                 excercises : response.data
             })
-            console.log("GET : http://localhost:'+port+'/excercises");
+            console.log("GET : http://localhost:3200/excercises");
         })
         .catch((error) =>{
             console.log(error);
@@ -48,9 +48,9 @@ class ExcerciseList extends Component {
     }
 
     deleteExcercise(id){
-        axios.delete('http://localhost:'+port+'/excercises/'+id)
+        axios.delete('http://localhost:3200/excercises/'+id)
         .then(res => {
-            console.log('DELETE API:http://localhost:'+port+'/excercises/'+id);
+            console.log('DELETE API:http://localhost:3200/excercises/'+id);
             console.log(res.data)
             console.log('Excercise Deleted');
         });

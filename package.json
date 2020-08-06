@@ -35,6 +35,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
+        "heroku-postbuild":"npm run build",
         "dev": "concurrently \"npm start\" \"node server.js\""
     },
     "eslintConfig": {
