@@ -3,7 +3,7 @@ import Axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-
+const port = process.env.PORT || 3200;
 class EditExcercises extends Component {
 
     constructor(props){
@@ -28,9 +28,9 @@ class EditExcercises extends Component {
 
     componentDidMount(){
 
-        Axios.get('http://localhost:3200/excercises/'+this.props.match.params.id)
+        Axios.get('http://localhost:'+port+'/excercises/'+this.props.match.params.id)
         .then(response=>{
-            console.log('GET : http://localhost:3200/excercises/'+this.props.match.params.id);
+            console.log('GET : http://localhost:'+port+'/excercises/'+this.props.match.params.id);
             this.setState({
                 username: response.data.username,
                 description: response.data.description,
@@ -43,9 +43,9 @@ class EditExcercises extends Component {
         })
 
 
-        Axios.get('http://localhost:3200/users')
+        Axios.get('http://localhost:'+port+'/users')
         .then(response =>{
-            console.log('GET : http://localhost:3200/users');
+            console.log('GET : http://localhost:'+port+'/users');
             if(response.data.length > 0){
                 this.setState({
                     users: response.data.map(user => user.username)
@@ -54,7 +54,7 @@ class EditExcercises extends Component {
 
         })
         //to fetch data from db and print to console
-        //Axios.get('http://localhost:3200/excercises')
+        //Axios.get('http://localhost:'+port+'/excercises')
         //.then(res=>console.log(res.data))
     }
 
@@ -94,9 +94,9 @@ class EditExcercises extends Component {
 
         console.log(excercise);
 
-        Axios.put('http://localhost:3200/excercises/update/'+this.props.match.params.id,excercise)
+        Axios.put('http://localhost:'+port+'/excercises/update/'+this.props.match.params.id,excercise)
         .then(response => {
-            console.log('PUT : http://localhost:3200/excercises/update/'+this.props.match.params.id);
+            console.log('PUT : http://localhost:'+port+'/excercises/update/'+this.props.match.params.id);
             console.log(response.data)
         })
         .catch(err => console.log(err));

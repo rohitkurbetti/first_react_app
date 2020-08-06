@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
-
+const port = process.env.PORT || 3200;
 class CreateUsers extends Component {
 
     constructor(props){
@@ -29,7 +29,7 @@ class CreateUsers extends Component {
 
         console.log(user);
         //database path--! u can get it from Postman also
-        Axios.post('http://localhost:3200/users/add',user)
+        Axios.post('http://localhost:'+port+'/users/add',user)
         .then(res => console.log(res.data))
 
         this.setState({
