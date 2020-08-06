@@ -18,10 +18,10 @@ app.use('/excercises',excerciseRouter);
 
 if(process.env.NODE_ENV === 'production')
 {
-	app.use(express.static('build'));
+	app.use(express.static(__dirname+'/public'));
 
 	app.get('*',(req,res)=>{
-		res.sendFile(path.resolve(__dirname),'Build','index.html');
+		res.sendFile(path.resolve(__dirname),'public','index.html');
 	});	
 
 }
