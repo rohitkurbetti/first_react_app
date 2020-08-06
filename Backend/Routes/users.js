@@ -5,7 +5,7 @@ let User = require('../models/user.model');
 
 
 //getUser data
-router.get('/home',(req,res)=>{
+router.get('/',(req,res)=>{
     User.find()
     .then(users=>res.json(users))
     .catch(err=>res.status(400).json({'error' : err}));
