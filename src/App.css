@@ -4,14 +4,14 @@
   box-sizing: border-box;
 }
 
-
+/*
 
 body{
   color: #ffd6c7;
   font-family: 'Baloo Da 2', cursive;
   font-family: 'Gudea', sans-serif;
   line-height: 1.4;
-  /*background-image: url('./images/image (2).jpg');*/
+  background-image: url('./images/image (2).jpg');
   background-repeat: none;
   background-size: cover;
 }
@@ -40,4 +40,4 @@ header{
 
 .btn:hover{
   background: #723e34;
-}
+}*/

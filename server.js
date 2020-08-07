@@ -15,16 +15,14 @@ app.use(express.json());
 
 app.use('/users',userRouter);
 app.use('/excercises',excerciseRouter);
-
 if(process.env.NODE_ENV === 'production')
 {
-	app.use(express.static(__dirname));
-
-	app.get('*',(req,res)=>{
-		res.sendFile(path.resolve(__dirname+'/public'),'index.html');
-	});	
-
+	app.use(express.static('build'));
 }
+
+app.get('*',(req,res)=>{
+	res.sendFile(path.resolve(__dirname,'build','index.html'));
+});	
 
 
 
