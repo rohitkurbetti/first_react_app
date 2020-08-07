@@ -2,13 +2,10 @@
     "name": "project",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://react-app1234.herokuapp.com/",
+    "homepage": ".",
     "engines": {
         "node": "12.18.3",
         "npm":"6.14.6"
-    },
-    "header": {
-        "proxy":"http://localhost:3200/"
     },
     "dependencies": {
         "@testing-library/jest-dom": "^4.2.4",

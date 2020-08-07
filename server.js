@@ -15,9 +15,6 @@ app.use(express.json());
 
 app.use('/users',userRouter);
 app.use('/excercises',excerciseRouter);
-app.use(express.static('public'));
-app.use(express.static('src'));
-app.use(express.static('Backend'));
 if(process.env.NODE_ENV === 'production')
 {
 	app.use(express.static('build'));
