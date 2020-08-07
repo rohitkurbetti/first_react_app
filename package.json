@@ -36,7 +36,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "heroku-postbuild":"npm run build",
-        "dev": "\"cd backend && npm start\""
+        "dev": "\"nodemon server.js\""
     },
     "eslintConfig": {
         "extends": "react-app"
