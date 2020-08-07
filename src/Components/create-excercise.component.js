@@ -27,7 +27,7 @@ class CreateExcercises extends Component {
  
 
     componentDidMount(){
-        Axios.get('http://localhost:3200/users')
+        Axios.get('/users')
         .then(response =>{
             if(response.data.length > 0){
                 console.log('GET : http://localhost:3200/users');
@@ -79,7 +79,7 @@ class CreateExcercises extends Component {
 
         console.log(excercise);
 
-        Axios.post('http://localhost:3200/excercises/add',excercise)
+        Axios.post('/excercises/add',excercise)
         .then(response => {
             console.log("POST : http://localhost:3200/excercises/add"+excercise);
             console.log(response.data) 

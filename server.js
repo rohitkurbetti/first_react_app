@@ -16,9 +16,9 @@ app.use('/excercises',excerciseRouter);
 
 const path = require("path");
 
-app.use(express.static("build"));
+app.use(express.static(path.join(__dirname,'build')));
 app.get("/*", (req, res) => {
- res.sendFile(path.resolve(__dirname, "build", "index.html"));
+ res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 const uri = process.env.ATLAS_URI;
