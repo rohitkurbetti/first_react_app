@@ -24,7 +24,7 @@ class DeleteUsers extends Component {
     }
 
     componentDidMount() {
-        Axios.get('/users')
+        Axios.get('http://localhost:3200/users')
             .then(response => {
                 console.log('GET : http://localhost:3200/users');
                 this.setState({
@@ -42,7 +42,7 @@ class DeleteUsers extends Component {
     }
 
     deleteUser(id) {
-        Axios.delete('/users/'+id)
+        Axios.delete('http://localhost:3200/users/'+id)
             .then(res => {
                 console.log('DELETE : http://localhost:3200/users/'+id);
                 console.log(res.data)

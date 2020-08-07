@@ -28,7 +28,7 @@ class EditExcercises extends Component {
 
     componentDidMount(){
 
-        Axios.get('/excercises/'+this.props.match.params.id)
+        Axios.get('http://localhost:3200/excercises/'+this.props.match.params.id)
         .then(response=>{
             console.log('GET : http://localhost:3200/excercises/'+this.props.match.params.id);
             this.setState({
@@ -43,7 +43,7 @@ class EditExcercises extends Component {
         })
 
 
-        Axios.get('/users')
+        Axios.get('http://localhost:3200/users')
         .then(response =>{
             console.log('GET : http://localhost:3200/users');
             if(response.data.length > 0){
@@ -94,7 +94,7 @@ class EditExcercises extends Component {
 
         console.log(excercise);
 
-        Axios.put('/excercises/update/'+this.props.match.params.id,excercise)
+        Axios.put('http://localhost:3200/excercises/update/'+this.props.match.params.id,excercise)
         .then(response => {
             console.log('PUT : http://localhost:3200/excercises/update/'+this.props.match.params.id);
             console.log(response.data)

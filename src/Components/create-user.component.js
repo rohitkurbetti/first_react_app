@@ -29,7 +29,7 @@ class CreateUsers extends Component {
 
         console.log(user);
         //database path--! u can get it from Postman also
-        Axios.post('/users/add',user)
+        Axios.post('http://localhost:3200/users/add',user)
         .then(res => console.log(res.data))
 
         this.setState({
