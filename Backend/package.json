@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "homepage": ".",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "heroku-postbuild":"cd ../ && npm install && npm run build"
   },
   "author": "",
   "license": "ISC"
