@@ -21,7 +21,7 @@ class Navbar extends Component {
                         </li>
 
                         <li className="navbar-item">
-                            <Link to="/delete" className="nav-link">Delete User</Link>
+                            <Link to="/delete/users" className="nav-link">Delete User</Link>
                         </li>
 
                     </ul>
