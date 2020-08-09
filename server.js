@@ -10,7 +10,7 @@ const port = process.env.PORT||3200;
 
 app.use(cors());
 app.use(express.json());
-
+app.use(express.static(__dirname + '/public'));
 app.use('/users',userRouter);
 app.use('/excercises',excerciseRouter);
 if (process.env.NODE_ENV === 'production') {

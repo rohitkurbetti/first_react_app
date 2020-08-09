@@ -24,7 +24,7 @@ class DeleteUsers extends Component {
     }
 
     componentDidMount() {
-        Axios.get('https://react-app1234.herokuapp.com/users')
+        Axios.get('http://localhost:3200/users')
             .then(response => {
                 console.log('GET : http://localhost:3200/users');
                 console.log('-->>>'+port);
