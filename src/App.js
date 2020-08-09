@@ -23,7 +23,7 @@ class App extends Component {
                     <Route path="/edit/:id" component={EditExcercise} />
                     <Route path="/create" component={CreateExcercise} />
                     <Route path="/user" component={CreateUser} />
-                    <Route path="/delete/users" component={DeleteUser} />
+                    <Route path="/delete" component={DeleteUser} />
                 </div>
             </Router>
         );

@@ -11,14 +11,13 @@ const port = process.env.PORT||3200;
 app.use(cors());
 app.use(express.json());
 
-app.use('/delete/users',userRouter);
+app.use('/users',userRouter);
 app.use('/excercises',excerciseRouter);
-app.use(express.static(path.join(__dirname,"Backend")));
-app.use(express.static(path.join(__dirname,"src")));
-app.use(express.static(path.join(__dirname,"public")));
-app.use(express.static(path.join(__dirname,'build')));
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('build'));
+}
 app.get("*", (req, res) => {
- res.sendFile(express.static(path.join(__dirname, "build", "index.html")));
+ res.sendFile(path.join(__dirname,'./build/index.html'));
 });
 
 const uri = process.env.ATLAS_URI;
