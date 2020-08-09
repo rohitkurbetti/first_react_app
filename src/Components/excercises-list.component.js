@@ -29,7 +29,7 @@ class ExcerciseList extends Component {
     }
 
     componentDidMount(){
-        axios.get('excercises')
+        axios.get('/excercises')
         .then(response => {
             this.setState({
                 excercises : response.data
@@ -38,6 +38,7 @@ class ExcerciseList extends Component {
         })
         .catch((error) =>{
             console.log(error);
+            console.log(port);
         })
     }
 
@@ -48,7 +49,7 @@ class ExcerciseList extends Component {
     }
 
     deleteExcercise(id){
-        axios.delete('/excercises'+id)
+        axios.delete('/excercises/'+id)
         .then(res => {
             console.log('DELETE API:http://localhost:3200/excercises/'+id);
             console.log(res.data)
