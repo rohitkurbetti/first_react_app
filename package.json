@@ -2,7 +2,6 @@
     "name": "project",
     "version": "0.1.0",
     "private": true,
-    "proxy":"http://localhost:3200",
     "dependencies": {
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.5.0",
@@ -30,8 +29,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "dev": "concurrently \"npm start\" \"nodemon server.js\"",
-        "heroku-postbuild":"npm run build"
+        "dev": "concurrently \"npm start\" \"nodemon server.js\""
     },
     "eslintConfig": {
         "extends": "react-app"
