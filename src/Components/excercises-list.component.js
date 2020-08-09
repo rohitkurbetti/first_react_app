@@ -29,7 +29,7 @@ class ExcerciseList extends Component {
     }
 
     componentDidMount(){
-        axios.get('/excercises')
+        axios.get('http://localhost:'+port+'/excercises')
         .then(response => {
             this.setState({
                 excercises : response.data
