@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
-
+const port = process.env.PORT||3200;
 const DeleteUser = props => (
     <tr>
         <td>{props.currentUser._id}</td>
@@ -24,14 +24,17 @@ class DeleteUsers extends Component {
     }
 
     componentDidMount() {
-        Axios.get('/users')
+        Axios.get('http://localhost:3200/users')
             .then(response => {
                 console.log('GET : http://localhost:3200/users');
+                console.log('-->>>'+port);
                 this.setState({
                     users: response.data
                 });
             })
-            .catch(err => console.log(err));
+            .catch(err => {console.log(err)
+                console.log('-->>>'+port);
+            });
     }
 
 
