@@ -24,7 +24,7 @@ class DeleteUsers extends Component {
     }
 
     componentDidMount() {
-        Axios.get('/users')
+        Axios.get('/delete/users')
             .then(response => {
                 console.log('GET : http://localhost:3200/users');
                 console.log('-->>>'+port);

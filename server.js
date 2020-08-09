@@ -11,7 +11,7 @@ const port = process.env.PORT||3200;
 app.use(cors());
 app.use(express.json());
 
-app.use('/users',userRouter);
+app.use('/delete/users',userRouter);
 app.use('/excercises',excerciseRouter);
 app.use(express.static(path.join(__dirname,"Backend")));
 app.use(express.static(path.join(__dirname,"src")));
