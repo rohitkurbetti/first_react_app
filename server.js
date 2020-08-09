@@ -2,7 +2,7 @@ const express= require('express');
 const cors = require('cors');
 const userRouter = require('./Backend/Routes/users');
 const excerciseRouter = require('./Backend/Routes/excercises');
-
+const path = require("path");
 require('dotenv').config();
 const mongoose = require('mongoose');
 const app = express();
@@ -14,7 +14,6 @@ app.use(express.json());
 app.use('/users',userRouter);
 app.use('/excercises',excerciseRouter);
 
-const path = require("path");
 
 app.use(express.static(path.join(__dirname,'build')));
 app.get("*", (req, res) => {

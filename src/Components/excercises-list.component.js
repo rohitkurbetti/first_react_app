@@ -34,7 +34,7 @@ class ExcerciseList extends Component {
             this.setState({
                 excercises : response.data
             })
-            console.log('GET->: http://localhost:'+port+'/excercises');
+            console.log('GET->: http://localhost: only port-->>'+port+'/excercises');
         })
         .catch((error) =>{
             console.log(error);
