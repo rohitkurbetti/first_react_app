@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import "../../node_modules/bootstrap/dist/js/bootstrap.min.js"
+import "../../node_modules/jquery/dist/jquery.min.js";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+
 const port = process.env.PORT||3200;
 
 const Excercise = props => (
@@ -65,20 +70,22 @@ class ExcerciseList extends Component {
         return (
             <div>
                 <h3>Logged Excercises</h3>
-                <table className="table table-striped">
-                    <thead className="thead-light">
-                        <tr>
-                            <th>Username</th>
-                            <th>Description</th>
-                            <th>Duration(Min)</th>
-                            <th>Date</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.excerciseList()}
-                    </tbody>
-                </table>
+                <div className="table-responsive">                
+                    <table className="table table-striped">
+                        <thead className="thead-light">
+                            <tr>
+                                <th>Username</th>
+                                <th>Description</th>
+                                <th>Duration(Min)</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.excerciseList()}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         )
     }

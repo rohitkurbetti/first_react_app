@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import "../../node_modules/bootstrap/dist/js/bootstrap.min.js"
+import "../../node_modules/jquery/dist/jquery.min.js";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 class EditExcercises extends Component {
 

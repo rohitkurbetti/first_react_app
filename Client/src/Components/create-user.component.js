@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
+import "../../node_modules/bootstrap/dist/js/bootstrap.min.js"
+import "../../node_modules/jquery/dist/jquery.min.js";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 class CreateUsers extends Component {
 
