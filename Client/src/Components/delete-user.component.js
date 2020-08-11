@@ -63,7 +63,7 @@ class DeleteUsers extends Component {
             <div className="container">
                 <form onSubmit={this.onSubmit}>
                 <div className="table-responsive">
-                <table className="table table-striped table-sm">
+                <table className="table table-striped">
                     <thead className="thead-light">
                         <tr>
                             <th>Id</th>
