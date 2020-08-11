@@ -62,8 +62,8 @@ class DeleteUsers extends Component {
         return (
             <div className="container">
                 <form onSubmit={this.onSubmit}>
-                
-                <table className="table table-striped">
+                <div className="table-responsive">
+                <table className="table table-striped table-sm">
                     <thead className="thead-light">
                         <tr>
                             <th>Id</th>
@@ -75,7 +75,7 @@ class DeleteUsers extends Component {
                         {this.onchangeUser()}
                     </tbody>
                     </table>
-                
+                </div>
                 </form>
             </div>
         )

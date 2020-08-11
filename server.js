@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
-mongoose.connect(process.env.MONGODB_URI||uri,{useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology: true});
+mongoose.connect(process.env.MONGODB_URI || uri,{useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology: true});
 const connection = mongoose.connection;
 
 connection.once('open', ()=>{
@@ -22,6 +22,9 @@ connection.once('open', ()=>{
 app.use('/users',userRouter);
 app.use('/excercises',excerciseRouter);
 
+app.get('*',(req,res)=>{
+	res.sendFile(path.join(__dirname,'Client','Public','index.html'));
+});
 
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('Client/build'));
