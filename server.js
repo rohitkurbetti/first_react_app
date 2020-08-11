@@ -18,14 +18,8 @@ const connection = mongoose.connection;
 connection.once('open', ()=>{
 	console.log('Mongodb db connection established succesfully');
 });
-
 app.use('/users',userRouter);
 app.use('/excercises',excerciseRouter);
-
-app.get('*',(req,res)=>{
-	res.sendFile(path.join(__dirname,'Client','Public','index.html'));
-});
-
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('Client/build'));
 	app.get("*", (req, res) => {
