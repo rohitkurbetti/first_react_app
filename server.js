@@ -22,6 +22,7 @@ connection.once('open', ()=>{
 app.use('/users',userRouter);
 app.use('/excercises',excerciseRouter);
 
+
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('Client/build'));
 	app.get("*", (req, res) => {

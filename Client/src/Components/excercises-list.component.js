@@ -71,7 +71,7 @@ class ExcerciseList extends Component {
             <div>
                 <h3>Logged Excercises</h3>
                 <div className="table-responsive">                
-                    <table className="table table-striped">
+                    <table className="table table-striped table-sm">
                         <thead className="thead-light">
                             <tr>
                                 <th>Username</th>
