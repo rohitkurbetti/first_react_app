@@ -76,7 +76,7 @@ class ExcerciseList extends Component {
                             <tr>
                                 <th>Username</th>
                                 <th>Description</th>
-                                <th>Duration(Min)</th>
+                                <th>Duration</th>
                                 <th>Date</th>
                                 <th>Actions</th>
                             </tr>
