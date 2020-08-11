@@ -103,7 +103,7 @@ class CreateExcercises extends Component {
                 <h3>Create Excercise Log</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="row">
-                        <div className="col-4">
+                        <div className="col-5 col-sm-5">
                     <div className="form-group">
                         <label>Username: </label>
                         <select 
@@ -120,7 +120,7 @@ class CreateExcercises extends Component {
                         </select>
                     </div>
                     </div>
-                            <div className="col-8">
+                            <div className="col-7 col-sm-7">
                     <div className="form-group">
                         <label>Description</label>
                         <input 
